@@ -1,0 +1,8 @@
+<%=  simple_form_for planet, wrapper: :inline_form, html: { class: 'form-inline' } do |f| %>
+  <%= f.input :name, label: 'Name : ' %>
+  <%= f.input :size, label: 'Size : ' %>
+  <%= button_tag :submit,  style: "border:0;background:transparent;" do %>
+    <i class="far fa-check-circle h4 mx-2 text-primary" aria-hidden="true"></i>
+  <% end %>
+  <%= link_to "<i class='far fa-times-circle h4'></i>".html_safe, :back%>
+<% end %>
