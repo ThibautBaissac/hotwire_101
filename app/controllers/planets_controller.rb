@@ -1,5 +1,5 @@
 class PlanetsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index, :show, :edit, :update ]
+  skip_before_action :authenticate_user!, only: [ :index, :show, :edit, :update, :tabs, :telluric, :gas ]
   before_action :set_planet, only: [:show, :edit, :update]
 
   def index
@@ -23,6 +23,12 @@ class PlanetsController < ApplicationController
       end
     end
   end
+
+  def tabs;  end
+
+  def telluric; end
+
+  def gas; end
 
   private
 

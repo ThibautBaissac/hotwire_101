@@ -1,0 +1,11 @@
+<h1>PLANETS</h1>
+<%= image_tag "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Planets2013.svg/1200px-Planets2013.svg.png", class: "img-fluid" %>
+<ul>
+  <li><%= link_to "Telluric planet", telluric_planets_path, data: {"turbo-frame": :"tabs_content"} %></li>
+  <li><%= link_to "Gas planet", gas_planets_path, data: {"turbo-frame": :"tabs_content"} %></li>
+</ul>
+<hr>
+<%# CONTENT %>
+<div class="content">
+  <%= turbo_frame_tag "tabs_content", src: tabs_planets_path %>
+</div>
