@@ -19,7 +19,7 @@ Notice how the url doesn't change, but the content is updated ? ⚡️
 
 This is done without a single line of JS!
 
-![turbo-frame](https://user-images.githubusercontent.com/59996803/144263956-919724de-c455-4fc9-bb44-4b35f7e7845d.gif)
+![edit-inline](https://user-images.githubusercontent.com/59996803/144410980-42fc3bef-532c-419a-8a9b-2df3f57dccfd.gif)
 
 ---
 ## 2. QUICK START
