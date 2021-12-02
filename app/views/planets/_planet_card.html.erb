@@ -1,5 +1,7 @@
-<%= turbo_frame_tag "planet" do %>
-  <p><%= planet.name %>
-  <%= planet.size %>
-  <%= link_to "<i class='fas fa-edit'></i>".html_safe, edit_planet_path(planet) %></p>
+<%= turbo_frame_tag "planet-#{planet.id}" do %>
+  <div class="planet-table">
+    <span><%= planet.name %></span>
+    <span><%= planet.size %></span>
+    <span><%= link_to "<i class='fas fa-edit'></i>".html_safe, edit_planet_path(planet) %></span>
+  </div>
 <% end %>

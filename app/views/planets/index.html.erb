@@ -1,8 +1,12 @@
 <div class="container">
-  <h1>Planets#index</h1>
-  <p>Find me in app/views/planet/index.html.erb</p>
-  <hr>
-  <% @planets.each do|planet| %>
+  <h1>inline edit with turbo-frame-tag</h1>
+  <div class="planet-table my-4 border-bottom font-weight-bold">
+    <span>Name</span>
+    <span>Size (km)</span>
+    <span>Edit</span>
+  </div>
+  <% @planets.each do |planet| %>
     <%= render "planet_card", planet: planet %>
   <% end %>
 </div>
+<hr>

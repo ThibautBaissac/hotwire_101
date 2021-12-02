@@ -1,8 +1,8 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-dark navbar-lewagon mb-3">
   <div class="container">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to root_path, class: "navbar-brand" do %>
       <%#= image_tag "icons/logo.png" %>
-      HOTW<i class="fas fa-bolt"></i>RE
+      HOTW<i class="fas fa-bolt"></i>RE 101
     <% end %>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -25,9 +25,21 @@
             </div>
           </li>
         <% else %>
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        <li class="nav-item dropdown">
+            <%= button_tag "<i class='fas fa-chevron-circle-down'></i>".html_safe, class: "h3 text-primary", style: "padding-top:10px; border:0; background:transparent;", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <%= link_to "Quick start", "#", class: "dropdown-item" %>
+              <%= link_to "Inline edit", "#", class: "dropdown-item" %>
+              <%= link_to "Sorting", "#", class: "dropdown-item" %>
+              <%= link_to "Tabs", "#", class: "dropdown-item" %>
+              <%= link_to "Transition", "#", class: "dropdown-item" %>
+              <%= link_to "Modal", "#", class: "dropdown-item" %>
+              <%= link_to "Live comments", "#", class: "dropdown-item" %>
+            </div>
           </li>
+          <%# <li class="nav-item"> %>
+            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <%# </li> %>
         <% end %>
       </ul>
     </div>
