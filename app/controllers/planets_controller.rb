@@ -16,10 +16,10 @@ class PlanetsController < ApplicationController
     respond_to do |format|
       if @planet.update(planet_params)
         format.html { redirect_to @planet, notice: "The planet was successfully updated." }
-        format.json { render :show, status: :ok, location: @planet }
+        # format.json { render :show, status: :ok, location: @planet }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @planet.errors, status: :unprocessable_entity }
+        # format.json { render json: @planet.errors, status: :unprocessable_entity }
       end
     end
   end
