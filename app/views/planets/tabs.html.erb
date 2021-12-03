@@ -1,16 +1,21 @@
 <h1>PLANETS</h1>
 <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Planets2013.svg/1200px-Planets2013.svg.png", class: "img-fluid" %>
-<ul class="nav nav-pills mt-5">
+<ul class="nav nav-pills mt-5" data-controller="tabs">
   <li class="nav-item">
-    <%= link_to "Telluric planet", telluric_planets_path, data: {"turbo-frame": :"tabs_content"}, class: "nav-link active" %>
+    <%= link_to "Telluric planet", telluric_planets_path,
+        data: { turbo_frame: :tabs_content,
+        tabs_target: :btn1, action: :"click->tabs#btn1State" },
+        class: "nav-link active" %>
   </li>
   <li class="nav-item">
-    <li><%= link_to "Gas planet", gas_planets_path, data: {"turbo-frame": :"tabs_content"}, class: "nav-link" %></li>
+    <%= link_to "Gas planet", gas_planets_path,
+        data: { turbo_frame: :tabs_content,
+        tabs_target: :btn2, action: :"click->tabs#btn2State"},
+        class: "nav-link" %>
   </li>
 </ul>
-
 <hr>
 <%# CONTENT %>
-<div class="content">
+<div class="content mb-3">
   <%= turbo_frame_tag "tabs_content", src: telluric_planets_path %>
 </div>
