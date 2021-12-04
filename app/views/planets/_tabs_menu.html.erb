@@ -1,0 +1,8 @@
+<ul class="nav nav-pills mt-5">
+  <li class="nav-item">
+    <%= link_to "Telluric planet", tabs_planets_path, class: "nav-link #{action_name == 'tabs' ? 'active' : ''}" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to "Gas planet", gas_planets_path, class: "nav-link #{action_name == 'gas' ? 'active' : ''}" %>
+  </li>
+</ul>

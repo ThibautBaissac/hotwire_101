@@ -1,12 +1,17 @@
-<%= turbo_frame_tag "tabs_content" do %>
-  <p>
-A gas giant is a giant planet composed mainly of hydrogen and helium.
-Gas giants are also called failed stars because they contain the same basic elements as a star.
-Jupiter and Saturn are the gas giants of the Solar System. The term “gas giant” was originally synonymous with “giant planet”,
-but in the 1990s it became known that Uranus and Neptune are really a distinct class of giant planets, being composed mainly
-of heavier volatile substances (which are referred to as “ices”). For this reason, Uranus and Neptune are now often classified
-in the separate category of ice giants.
-  </p>
-  <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Jupiter_New_Horizons.jpg/460px-Jupiter_New_Horizons.jpg",
-      class: "img-fluid" %>
+<%# GAS PLANET %>
+<%= turbo_frame_tag "tabs" do %>
+  <%= render 'tabs_menu' %>
+  <hr>
+  <div class="content mb-3">
+    <p>
+      A gas giant is a giant planet composed mainly of hydrogen and helium.
+      Gas giants are also called failed stars because they contain the same basic elements as a star.
+      Jupiter and Saturn are the gas giants of the Solar System. The term “gas giant” was originally synonymous with “giant planet”,
+      but in the 1990s it became known that Uranus and Neptune are really a distinct class of giant planets, being composed mainly
+      of heavier volatile substances (which are referred to as “ices”). For this reason, Uranus and Neptune are now often classified
+      in the separate category of ice giants.
+    </p>
+    <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Jupiter_New_Horizons.jpg/460px-Jupiter_New_Horizons.jpg",
+    class: "img-fluid" %>
+  </div>
 <% end %>

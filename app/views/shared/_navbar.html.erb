@@ -3,10 +3,7 @@
     <%= link_to root_path, class: "navbar-brand" do %>
       HOTW<i class="fas fa-bolt"></i><span class="sr-only">I</span>RE 101
     <% end %>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
@@ -27,10 +24,13 @@
         <li class="nav-item dropdown">
             <%= button_tag "<i class='fas fa-chevron-circle-down'></i>".html_safe, class: "h3 text-primary", style: "padding-top:10px; border:0; background:transparent;", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              <%= link_to "Quick start", "https://github.com/ThibautBaissac/hotwire_101", class: "dropdown-item", target: "_blank" %>
+              <%= link_to "Source code", "https://github.com/ThibautBaissac/hotwire_101", class: "dropdown-item", target: "_blank" %>
               <%= link_to "Inline edit", root_path, class: "dropdown-item" %>
               <%= link_to "Tabs", tabs_planets_path, class: "dropdown-item" %>
               <div class="dropdown-divider"></div>
+              <%= link_to "Modal", "#", class: "dropdown-item text-muted" %>
+              <%= link_to "Flash messages", "#", class: "dropdown-item text-muted" %>
+              <%= link_to "Infinite scroll", "#", class: "dropdown-item text-muted" %>
               <%= link_to "Sorting", "#", class: "dropdown-item text-muted" %>
               <%= link_to "Transition", "#", class: "dropdown-item text-muted" %>
               <%= link_to "Modal", "#", class: "dropdown-item text-muted" %>
